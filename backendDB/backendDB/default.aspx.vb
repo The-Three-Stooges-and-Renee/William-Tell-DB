@@ -32,7 +32,7 @@ Public Class _default
     Dim amout4 As String = ""
 
     Dim path As String = ""
-    Dim ajax As Boolean = False
+    Dim ajax As Boolean
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'authenticate to page
