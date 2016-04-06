@@ -61,7 +61,7 @@ Public Class _default
         Else
             ajax = False
         End If
-
+        Me.TextBox1.Text = (Request.QueryString("meth") & ";" & ajax.ToString)
         If Request.QueryString("action") = "pull" Then
             senddata()
         Else
