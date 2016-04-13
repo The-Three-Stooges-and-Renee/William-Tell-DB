@@ -248,7 +248,7 @@ Public Class _default
         datacookie.Expires = (My.Computer.Clock.LocalTime.AddMinutes(1))
         Response.Cookies.Add(datacookie)
         If ajax = False Then
-            Response.Redirect("http://webhomework.geekkidconsulting.com/iit-timesheet/index.php?date=" & punchdate)
+            Response.Redirect("http://webhomework.geekkidconsulting.com/iit-timesheet/timesheet.php?date=" & punchdate)
         End If
 
     End Sub
