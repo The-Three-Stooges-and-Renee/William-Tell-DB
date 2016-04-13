@@ -32,6 +32,7 @@ Public Class _default
     Dim amout4 As String = ""
 
     Dim path As String = ""
+    Dim ajax As Boolean
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         'authenticate to page
@@ -54,8 +55,13 @@ Public Class _default
             Response.Redirect("login.aspx")
         End If
 
-
-
+        punchdate = Request.QueryString("date")
+        If Request.QueryString("meth") = "ajax" Then
+            ajax = True
+        Else
+            ajax = False
+        End If
+        Me.TextBox1.Text = (Request.QueryString("meth") & ";" & ajax.ToString)
         If Request.QueryString("action") = "pull" Then
             senddata()
         Else
@@ -241,7 +247,10 @@ Public Class _default
         datacookie.Domain = (".geekkidconsulting.com")
         datacookie.Expires = (My.Computer.Clock.LocalTime.AddMinutes(1))
         Response.Cookies.Add(datacookie)
-        Response.Redirect("http://webhomework.geekkidconsulting.com/iit-timesheet/index.php?date=" & punchdate)
+        If ajax = False Then
+            Response.Redirect("http://webhomework.geekkidconsulting.com/iit-timesheet/index.php?date=" & punchdate)
+        End If
+
     End Sub
     Private Function read(ByVal file As String)
         Return My.Computer.FileSystem.ReadAllText(path & file)

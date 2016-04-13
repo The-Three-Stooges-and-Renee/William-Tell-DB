@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" href="http://webhomework.geekkidconsulting.com/iit-timesheet/css/Screen.css" />
 </head>
-<body>
+<body class="Login">
     <form id="form1" runat="server">
-        <div>
-            <p>Please enter your username:</p>
+        <div id="login_form">
+            <p>Username:</p>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            <p>Please enter your password:</p>
+            <p>Password:</p>
             <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Login" />
             <asp:Button ID="Button2" runat="server" Text="Create test account" />
