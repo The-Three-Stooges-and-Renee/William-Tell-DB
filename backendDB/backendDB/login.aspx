@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" href="http://webhomework.geekkidconsulting.com/iit-timesheet/css/Screen.css" />
 </head>
-<body>
+<body class="Login">
     <form id="form1" runat="server">
         <div id="login_form">
             <p>Username:</p>
