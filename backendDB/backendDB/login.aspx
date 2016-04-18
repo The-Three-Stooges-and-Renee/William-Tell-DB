@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" href="http://webhomework.geekkidconsulting.com/iit-timesheet/css/Screen.css" />
 </head>
 <body class="Login">
+	<div class="logo">
+			<img src="images/IIT_logo.png" alt="IIT logo">
+	</div>
     <form id="form1" runat="server">
         <div id="login_form">
             <p>Username:</p>
