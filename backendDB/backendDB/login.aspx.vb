@@ -33,6 +33,7 @@ Public Class login
             logincookie = New HttpCookie(iitcookiename)
             logincookie.Expires = DateTime.Now.AddDays(-1D)
             Response.Cookies.Add(logincookie)
+            Response.Redirect("login.aspx")
         End If
     End Sub
 
