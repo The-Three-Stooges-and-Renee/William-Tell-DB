@@ -28,6 +28,12 @@ Public Class login
         redirectsites.Add("http://pixelsfighting.com/")
         redirectsites.Add("http://www.biglongnow.com/")
         redirectsites.Add("http://eelslap.com/")
+        If Request.QueryString("signout") = "true" Then
+            Dim logincookie As HttpCookie
+            logincookie = New HttpCookie(iitcookiename)
+            logincookie.Expires = DateTime.Now.AddDays(-1D)
+            Response.Cookies.Add(logincookie)
+        End If
     End Sub
 
     Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -77,7 +83,7 @@ Public Class login
                     authcookie.Domain = (".geekkidconsulting.com")
                     authcookie.Expires = (My.Computer.Clock.LocalTime.AddMinutes(15))
                     Response.Cookies.Add(authcookie)
-                    Response.Redirect("http://webhomework.geekkidconsulting.com/iit-timesheet")
+                    Response.Redirect("http://webhomework.geekkidconsulting.com/iit-timesheet/index.php")
                 Else
                     Response.Redirect(redirectsites.Item(GetRandom(0, 20)))
                 End If
