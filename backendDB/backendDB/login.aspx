@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" href="http://webhomework.geekkidconsulting.com/iit-timesheet/css/Screen.css" />
 </head>
-<body class="Login">
+<body class="login">
 	<div class="logo">
 			<img src="images/IIT_logo.png" alt="IIT logo">
 	</div>
