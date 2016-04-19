@@ -6,6 +6,8 @@ Public Class login
     Dim iitcookiename As String = ("372fd75847c64826d41b24ac512d11803834447a")
     Dim redirectsites As ArrayList
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'Using random websites to help protect against brute-force attacks
+        'and reduce the load on my server during an attack.  (Sorry, I'm a security guy!  :P)
         redirectsites = New ArrayList
         redirectsites.Add("http://ducksarethebest.com/")
         redirectsites.Add("http://www.trypap.com/")
