@@ -11,7 +11,7 @@
 </head>
 <body class="login">
 	<div class="logo">
-			<img src="http://webhomework.geekkidconsulting.com/iit-timesheet/Images/IIT_logo.png" alt="IIT logo">
+			<img src="http://webhomework.geekkidconsulting.com/iit-timesheet/Images/IIT_logo_blk.png" alt="IIT logo">
 	</div>
     <form id="form1" runat="server">
         <div id="login_form">
